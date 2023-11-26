@@ -1,0 +1,76 @@
+﻿@model IEnumerable<Lead_Management_System.Models.LeadsEntity>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="AddLead">Add Lead</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LeadDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LeadName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmailAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mobile)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LeadSource)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LeadStatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NextFollowUpdate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LeadDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LeadName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmailAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mobile)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LeadSource)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LeadStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NextFollowUpdate)
+            </td>
+
+                <td><a href="Leads/UpdateLead/@item.Id">UPDATE</a></td>
+                <td><a href="Leads/DeleteLead/@item.Id">DELETE</a></td>
+            
+        </tr>
+}
+    </tbody>
+</table>
