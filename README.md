@@ -1,1 +1,2 @@
 # Lead Management System
+The Lead Repository Management project is designed to efficiently organize, store, and manage leads within a centralized system. It includes features such as lead categorization, status tracking, and communication history, streamlining the lead lifecycle. The system ensures easy retrieval of information, facilitates collaboration among team members, and enhances overall lead management effectiveness.
